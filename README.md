@@ -44,7 +44,7 @@ $900 was cash. The venue alone was $6,000. There was no second option.
 Worth stating plainly, because the gaps shaped the analysis more than the
 data did:
 
-- **Attendance was never recorded.** `checked_in_at` is empty for all 107
+- **Attendance was never recorded.** `checked_in_at` is empty for all
   rows and `num_events_checked_in` is 0 for all of them. QR codes were
   generated and never scanned, so the funnel stops at "accepted."
 - **Channel attribution is 9% covered.** Only 10 applications carry a
@@ -74,7 +74,7 @@ three applicants resolves to nobody. This is why recall is 0.44: for
 reconstructing who worked with whom, a wrong edge is worse than a missing
 one, and the scorecard shows the trade rather than hiding it.
 
-**Small numbers are flagged, not interpreted.** With 107 applications,
+**Small numbers are flagged, not interpreted.** With 150+ applications,
 most subgroups are tiny. `decisions.py` marks any group under 10 as
 uninterpretable and reports the count anyway, so the long tail stays
 visible without inviting conclusions it cannot support.
