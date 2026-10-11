@@ -1,0 +1,40 @@
+REACH
+  posts recorded : 4
+  total reach    : 24,900
+  total likes    : 359
+  total shares   : 185
+  note: 2 of 4 reach figures are rounded estimates
+
+APPLICATION WINDOW: 2026-08-06 to 2026-08-28
+  posts inside the window : 3
+  posts outside (excluded from attribution):
+    2026-09-15  Conclusion post
+
+BASELINE (days with no post, +1d window)
+  quiet days        : 14
+  mean applications : 4.2/day
+
+POST-DAY ALIGNMENT (+1d)
+  2026-08-11  Announcement post
+      reach  5,000   shares   30
+      applications in window:  14   expected   8.4   excess  +5.6
+      applications per 1,000 reached: 2.80
+
+  2026-08-18  Applications open
+      reach  7,100   shares   55
+      applications in window:  25   expected   8.4   excess +16.6
+      applications per 1,000 reached: 3.52
+
+  2026-08-27  Reel promo
+      reach  7,800   shares   76
+      applications in window:   9   expected   8.4   excess  +0.6
+      applications per 1,000 reached: 1.15
+
+  applications on post days: 48/107 (45% of the pool)
+
+  Caveat: this is timing correlation, not tracked attribution.
+  Only 9% of applications carry a utm_source, and other channels
+  (Discord, word of mouth, club newsletters) are not observable here.
+  No click-through data exists: the per-post engagement metric is
+  shares, which measures amplification rather than intent, so the
+  link between a post and an application cannot be traced per user.
