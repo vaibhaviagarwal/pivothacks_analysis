@@ -74,7 +74,7 @@ three applicants resolves to nobody. This is why recall is 0.44: for
 reconstructing who worked with whom, a wrong edge is worse than a missing
 one, and the scorecard shows the trade rather than hiding it.
 
-**Small numbers are flagged, not interpreted.** With 150+ applications,
+**Small numbers are flagged, not interpreted.** With 100+ applications,
 most subgroups are tiny. `decisions.py` marks any group under 10 as
 uninterpretable and reports the count anyway, so the long tail stays
 visible without inviting conclusions it cannot support.
@@ -101,8 +101,11 @@ reports/           generated findings and the dashboard
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# place the registration export first:
-#   data/raw/pivot_attendees_export.csv
+# the four source files go in data/raw/ (not published: they hold personal data):
+#   pivot_attendees_export.csv   registration export
+#   problem_assignments.csv      who competed on which problem (ground truth for teams)
+#   social_posts.csv             Instagram posts: date, reach, likes, shares
+#   sponsors.csv                 sponsors and contribution value
 
 python src/pipeline/clean.py
 python src/pipeline/teams.py
@@ -114,9 +117,9 @@ python src/pipeline/dashboard.py
 open reports/dashboard.html
 ```
 
-Stages are numbered by dependency, not convention: `teams.py` needs
-`clean.py`'s output, `validate.py` needs `teams.py`'s, and `dashboard.py`
-needs all of them.
+Run the stages in this order. Each reads the previous one's output:
+`teams.py` needs `clean.py`'s, `validate.py` needs `teams.py`'s, and
+`dashboard.py` needs all of them.
 
 ## A note on the data
 
